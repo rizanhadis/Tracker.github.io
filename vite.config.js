@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [react()],
-  // Saat build untuk GH Pages, pakai subdirectory. Saat dev, pakai root.
-  base: command === 'build' ? '/Tracker.github.io/' : '/',
+  base: '/',
   server: {
     port: 3000,
     open: true
   }
-}))
+})
